@@ -1,0 +1,22 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'MusicApp' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for MusicApp
+
+pod 'IQKeyboardManager', '6.2.1'
+pod 'Kingfisher', '4.10.0'
+pod 'Alamofire', '4.8.2'
+pod 'ObjectMapper', '3.4.2'
+pod 'AlamofireObjectMapper', '5.2.0'
+pod 'FCFileManager'
+pod 'JGProgressHUD'
+pod 'RealmSwift'
+pod 'FCAlertView', '1.4.0'
+pod 'MarqueeLabel'
+pod 'LGSideMenuController'
+
+end

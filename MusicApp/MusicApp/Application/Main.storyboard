@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="MusicApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="PGs-dA-BHO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w79-S0-umy" customClass="NavigationBar" customModule="MusicApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="SW7-xB-nGE"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fJv-Ky-88S">
+                                <rect key="frame" x="0.0" y="104" width="414" height="758"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="xvo-h9-Jd2"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="dfP-GN-w18"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="w79-S0-umy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ABZ-Fh-1dl"/>
+                            <constraint firstItem="fJv-Ky-88S" firstAttribute="top" secondItem="w79-S0-umy" secondAttribute="bottom" id="Deu-le-3EE"/>
+                            <constraint firstItem="w79-S0-umy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NHt-Q9-xrz"/>
+                            <constraint firstItem="fJv-Ky-88S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OKk-Dj-8Ep"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fJv-Ky-88S" secondAttribute="bottom" id="Vhf-zm-UZB"/>
+                            <constraint firstItem="PGs-dA-BHO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Zyg-Da-tf9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fJv-Ky-88S" secondAttribute="trailing" id="csW-Hl-6oE"/>
+                            <constraint firstAttribute="trailing" secondItem="PGs-dA-BHO" secondAttribute="trailing" id="eSi-9o-mYc"/>
+                            <constraint firstAttribute="bottom" secondItem="PGs-dA-BHO" secondAttribute="bottom" id="egE-Sh-KkI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w79-S0-umy" secondAttribute="trailing" id="t8b-uB-bOq"/>
+                            <constraint firstItem="PGs-dA-BHO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yZA-R6-OKr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="navigationBar" destination="w79-S0-umy" id="qQl-DW-BPz"/>
+                        <outlet property="tableView" destination="fJv-Ky-88S" id="6Vg-HJ-IF2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="49"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="562.5" height="1218"/>
+    </resources>
+</document>
