@@ -14,6 +14,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var listSanPhamMoiNhat = [MusicModel]()
+    var listNhatDinhPhaiNghe = [MusicModel]()
+    var listBaiHatPhoBien = [MusicModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,8 @@ class HomeViewController: UIViewController {
         
         tableView.registerCellNib(HeaderSection.self)
         tableView.registerCellNib(SanPhamMoiCell.self)
+        tableView.registerCellNib(NhatDinhPhaiNgheCell.self)
+        tableView.registerCellNib(BaiHatPhoBienCell.self)
         tableView.separatorStyle = .none
         
         // fake data
@@ -33,6 +37,27 @@ class HomeViewController: UIViewController {
         listSanPhamMoiNhat.append(item1)
         listSanPhamMoiNhat.append(item1)
         listSanPhamMoiNhat.append(item1)
+        
+        let item2 = MusicModel()
+        item2.name = "Anh Thanh Niên"
+        item2.singer = "HuyR"
+        item2.pathURL = "https://i.ytimg.com/vi/HPL74s4VPdk/maxresdefault.jpg"
+        listNhatDinhPhaiNghe.append(item2)
+        listNhatDinhPhaiNghe.append(item2)
+        listNhatDinhPhaiNghe.append(item2)
+        listNhatDinhPhaiNghe.append(item2)
+        
+        let item3 = MusicModel()
+        item3.name = "Cô Thắm Không về"
+        item3.singer = "Phát Hồ & Emily"
+        item3.pathURL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr8nPfHoY9FW60sj9s35ZnICSlsp71aL6kqA&usqp=CAU"
+        listBaiHatPhoBien.append(item3)
+        listBaiHatPhoBien.append(item3)
+        listBaiHatPhoBien.append(item3)
+        listBaiHatPhoBien.append(item3)
+        listBaiHatPhoBien.append(item3)
+        listBaiHatPhoBien.append(item3)
+        listBaiHatPhoBien.append(item3)
     }
 
 }
@@ -86,6 +111,16 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             // san pham moi nhat
             let cell = tableView.dequeueReusableCell(withIdentifier: String.className(SanPhamMoiCell.self)) as! SanPhamMoiCell
             cell.listSanPhamMoiNhat = listSanPhamMoiNhat
+            return cell
+        } else if indexPath.section == 1 {
+            // nhất định phải nghe
+            let cell = tableView.dequeueReusableCell(withIdentifier: String.className(NhatDinhPhaiNgheCell.self)) as! NhatDinhPhaiNgheCell
+            cell.listNhatDinhPhaiNghe = listNhatDinhPhaiNghe
+            return cell
+        } else if indexPath.section == 2 {
+            // bài hát phổ biến
+            let cell = tableView.dequeueReusableCell(withIdentifier: String.className(BaiHatPhoBienCell.self)) as! BaiHatPhoBienCell
+            cell.listBaiHatPhoBien = listBaiHatPhoBien
             return cell
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: String.className(SanPhamMoiCell.self)) as! SanPhamMoiCell
