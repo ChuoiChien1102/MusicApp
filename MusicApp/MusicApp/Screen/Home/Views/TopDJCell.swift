@@ -1,15 +1,17 @@
 //
-//  HeaderSection.swift
-//  BudgetPlanner
+//  TopDJCell.swift
+//  MusicApp
 //
-//  Created by ChuoiChien on 1/30/21.
+//  Created by ChuoiChien on 12/8/21.
 //
 
 import UIKit
 
-class HeaderSection: UITableViewCell {
-
-    @IBOutlet weak var name: UILabel!
+class TopDJCell: UITableViewCell {
+    
+    @IBOutlet weak var img: UIImageView!
+    @IBOutlet weak var stt: UILabel!
+    @IBOutlet weak var singer: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,4 +23,5 @@ class HeaderSection: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
 }
