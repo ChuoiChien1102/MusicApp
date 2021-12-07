@@ -6,9 +6,8 @@ final class NavigationBar: UIView {
     private static let NIB_NAME = "NavigationBar"
     
     @IBOutlet var view: UIView!
-    @IBOutlet weak var titleLabel: UILabel!
+    
     @IBOutlet weak var leftButton: UIButton!
-    @IBOutlet weak var rightButton: UIButton!
     
     override func awakeFromNib() {
         initWithNib()

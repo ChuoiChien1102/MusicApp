@@ -49,7 +49,7 @@ class DatabaseRealmManager: NSObject {
     //MARK:- Create
     
     //From local
-    func create( video: VideoModel ) {
+    func create( video: MusicModel ) {
         
 //        let videoDB = TBVideo()
 //        videoDB.IDDatabase = UUID.init().uuidString.lowercased()
@@ -91,10 +91,10 @@ class DatabaseRealmManager: NSObject {
     //MARK:- List
     
     
-    func listVideo() -> [VideoModel] {
+    func listVideo() -> [MusicModel] {
 
         
-        var listData:[VideoModel] = []
+        var listData:[MusicModel] = []
         
 //        let listVideo = realm.objects(TBVideo.self).filter {$0.isPremium == false && $0.IDUser == UserModel.share.userId}.sorted {$0.date > $1.date}
 //        

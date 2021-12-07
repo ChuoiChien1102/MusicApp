@@ -1,5 +1,5 @@
 //
-//  VideoResponse.swift
+//  MusicModel.swift
 //  VNPT-BRIS
 //
 //  Created by ChuoiChien on 12/2/20.
@@ -9,7 +9,7 @@
 import UIKit
 import ObjectMapper
 
-class VideoResponse: BaseResponse {
+class MusicResponse: BaseResponse {
     
     var info = [String: Any]()
     var items = [[String: Any]]()
@@ -24,13 +24,11 @@ class VideoResponse: BaseResponse {
     }
 }
 
-class VideoModel: NSObject {
+class MusicModel: NSObject {
     
     var ID = ""
     var IDDatabase = ""
-    var desc = ""
-    var coverImage = ""
-    var detailURL = ""
-    var downloadURL = ""
+    var name = ""
+    var singer = ""
     var pathURL = ""
 }

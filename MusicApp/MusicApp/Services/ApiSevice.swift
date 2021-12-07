@@ -16,13 +16,13 @@ class ApiSevice {
         return NetworkReachabilityManager()!.isReachable
     }
     
-    static func getLinkVideo(_ param: [String:Any], completion: @escaping (VideoResponse?, BaseError?) -> Void) -> Void {
+    static func getLinkVideo(_ param: [String:Any], completion: @escaping (MusicResponse?, BaseError?) -> Void) -> Void {
         if !isConnectedToInternet() {
             // Xử lý khi lỗi kết nối internet
             
             return
         }
-        Alamofire.request(ApiRouter.getLinkVideo(param)).responseObject { (response: DataResponse<VideoResponse>) in
+        Alamofire.request(ApiRouter.getLinkVideo(param)).responseObject { (response: DataResponse<MusicResponse>) in
             
             switch response.result {
             case .success:
