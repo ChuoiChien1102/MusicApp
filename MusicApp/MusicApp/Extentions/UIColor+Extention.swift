@@ -15,6 +15,13 @@ extension UIColor {
         self.init(hex: hex, alpha:1)
     }
     
+    convenience init(hex: Int, alpha colorAlpha: Double = 1.0) {
+        let r = CGFloat((hex & 0xFF0000) >> 16) / 255.0
+        let g = CGFloat((hex & 0x00FF00) >> 8) / 255.0
+        let b = CGFloat(hex & 0x0000FF) / 255.0
+        self.init(red: r, green: g, blue: b, alpha: CGFloat(colorAlpha))
+    }
+    
     convenience init(hex: String, alpha: CGFloat) {
         var hexWithoutSymbol = hex
         if hexWithoutSymbol.hasPrefix("#") {
@@ -49,5 +56,44 @@ extension UIColor {
             alpha:alpha)
     }
     
+    static func blackTextColor() -> UIColor {
+        return UIColor.init(hex: 0x000000, alpha: 0.87)
+    }
+    
+    static func backgroundViewColor() -> UIColor {
+        return UIColor.init(hex: 0x0D47A1, alpha: 1)
+    }
+    
+    static func mainBackgroundColor() -> UIColor {
+        return UIColor.init(hex: 0x0D47A1, alpha: 1)
+    }
+    
+    static func boldTextColor() -> UIColor {
+        return UIColor.init(hex: 0x0C1942)
+    }
+    
+    static func regularTextColor() -> UIColor {
+        return UIColor.init(hex: 0x005197)
+    }
+    
+    static func grayTextColor() -> UIColor {
+        return UIColor.init(hex: 0x74849C)
+    }
+    
+    static func greenStatusColor() -> UIColor {
+        return UIColor.init(hex: 0x13AE48)
+    }
+    
+    static func redStatusColor() -> UIColor {
+        return UIColor.init(hex: 0xEB5757)
+    }
+    
+    static func orangeStatusColor() -> UIColor {
+        return UIColor.init(hex: 0xFCA52B)
+    }
+    
+    static func tabbarColor() -> UIColor {
+        return UIColor.init(hex: 0x0F0742)
+    }
 }
 

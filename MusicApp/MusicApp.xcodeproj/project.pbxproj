@@ -54,6 +54,10 @@
 		155E6F79275FDD49000A48CC /* TopDJCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155E6F77275FDD49000A48CC /* TopDJCell.swift */; };
 		155E6F7A275FDD49000A48CC /* TopDJCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 155E6F78275FDD49000A48CC /* TopDJCell.xib */; };
 		155E6F7C275FE0BE000A48CC /* SingerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155E6F7B275FE0BE000A48CC /* SingerModel.swift */; };
+		15834227276052F500CD97A3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15834224276052F500CD97A3 /* TabBarController.swift */; };
+		1583422C2760542C00CD97A3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1583422B2760542C00CD97A3 /* SearchViewController.swift */; };
+		1583422E2760549700CD97A3 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1583422D2760549700CD97A3 /* LibraryViewController.swift */; };
+		15834230276054E200CD97A3 /* VipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1583422F276054E200CD97A3 /* VipViewController.swift */; };
 		15E83F36275C785E005A3B2C /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E83F34275C785E005A3B2C /* NavigationBar.swift */; };
 		15E83F37275C785E005A3B2C /* NavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15E83F35275C785E005A3B2C /* NavigationBar.xib */; };
 		15E83F3B275C7FCE005A3B2C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E83F39275C7FCE005A3B2C /* HomeViewController.swift */; };
@@ -110,6 +114,10 @@
 		155E6F77275FDD49000A48CC /* TopDJCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopDJCell.swift; sourceTree = "<group>"; };
 		155E6F78275FDD49000A48CC /* TopDJCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopDJCell.xib; sourceTree = "<group>"; };
 		155E6F7B275FE0BE000A48CC /* SingerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingerModel.swift; sourceTree = "<group>"; };
+		15834224276052F500CD97A3 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		1583422B2760542C00CD97A3 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		1583422D2760549700CD97A3 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		1583422F276054E200CD97A3 /* VipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VipViewController.swift; sourceTree = "<group>"; };
 		15E83F34275C785E005A3B2C /* NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		15E83F35275C785E005A3B2C /* NavigationBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationBar.xib; sourceTree = "<group>"; };
 		15E83F39275C7FCE005A3B2C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +175,7 @@
 		1523B2862759B752001452DB /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				15834221276052F500CD97A3 /* Tabbar */,
 				15E83F33275C785E005A3B2C /* Navigation */,
 				1523B2872759B752001452DB /* BaseViewController.swift */,
 				1523B2892759B752001452DB /* RootViewController.swift */,
@@ -253,6 +262,9 @@
 		15377A282759C55600BAE90A /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				158342292760541000CD97A3 /* Library */,
+				158342282760541000CD97A3 /* Search */,
+				1583422A2760541000CD97A3 /* Vip */,
 				15E83F38275C7FCE005A3B2C /* Home */,
 			);
 			path = Screen;
@@ -281,6 +293,38 @@
 				155E6F53275F5CF8000A48CC /* SFPRODISPLAYULTRALIGHTITALIC.OTF */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		15834221276052F500CD97A3 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				15834224276052F500CD97A3 /* TabBarController.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		158342282760541000CD97A3 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				1583422B2760542C00CD97A3 /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		158342292760541000CD97A3 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				1583422D2760549700CD97A3 /* LibraryViewController.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		1583422A2760541000CD97A3 /* Vip */ = {
+			isa = PBXGroup;
+			children = (
+				1583422F276054E200CD97A3 /* VipViewController.swift */,
+			);
+			path = Vip;
 			sourceTree = "<group>";
 		};
 		15E83F33275C785E005A3B2C /* Navigation */ = {
@@ -479,6 +523,8 @@
 				155E6F75275FD810000A48CC /* PlayListPhoBienCollectionViewCell.swift in Sources */,
 				15377A252759C4AF00BAE90A /* ApiRouter.swift in Sources */,
 				15377A0E2759C45900BAE90A /* Foundation+Extention.swift in Sources */,
+				1583422C2760542C00CD97A3 /* SearchViewController.swift in Sources */,
+				15834230276054E200CD97A3 /* VipViewController.swift in Sources */,
 				15E83F3B275C7FCE005A3B2C /* HomeViewController.swift in Sources */,
 				15377A0A2759C45900BAE90A /* UIWebView+Extention.swift in Sources */,
 				15377A062759C45900BAE90A /* UIView+Extention.swift in Sources */,
@@ -487,6 +533,7 @@
 				15377A052759C45900BAE90A /* UINavigationController+Extention.swift in Sources */,
 				15377A192759C4A500BAE90A /* TBVideo.swift in Sources */,
 				15377A272759C4AF00BAE90A /* BaseError.swift in Sources */,
+				15834227276052F500CD97A3 /* TabBarController.swift in Sources */,
 				155E6F69275FC75B000A48CC /* NhatDinhPhaiNgheCollectionViewCell.swift in Sources */,
 				155E6F79275FDD49000A48CC /* TopDJCell.swift in Sources */,
 				15377A242759C4AF00BAE90A /* BaseResponse.swift in Sources */,
@@ -496,6 +543,7 @@
 				15377A0D2759C45900BAE90A /* String+Extention.swift in Sources */,
 				15377A262759C4AF00BAE90A /* ApiSevice.swift in Sources */,
 				15377A302759C75B00BAE90A /* MusicModel.swift in Sources */,
+				1583422E2760549700CD97A3 /* LibraryViewController.swift in Sources */,
 				15377A072759C45900BAE90A /* UILabel+Extention.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
 
     @IBOutlet weak var navigationBar: NavigationBar!
     
